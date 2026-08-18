@@ -1,0 +1,11 @@
+apiVersion: 1
+datasources:
+  - name: Recipes PostgreSQL
+    type: postgres
+    access: proxy
+    url: postgres:5432
+    user: recipes
+    secureJsonData: {password: recipes}
+    jsonData: {database: recipes, sslmode: disable, postgresVersion: 1700, timescaledb: false}
+    isDefault: true
+

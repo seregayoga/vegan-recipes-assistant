@@ -1,0 +1,13 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with: {version: "0.8.11"}
+      - run: uv sync --dev
+      - run: uv run ruff check app.py ingest.py src tests evaluation
+      - run: uv run pytest
+      - run: docker build -t vegan-recipes-assistant .

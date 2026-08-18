@@ -1,0 +1,122 @@
+[
+  {
+    "query": "baby gem lettuce, garlic, gochujang, maple syrup",
+    "prompt": "concise",
+    "score": "bad",
+    "reason": "The answer is not grounded in the supplied query or expected recipe. It recommends three unrelated recipes and never identifies or recommends the expected \"Beyond Meat Chilli Beef Lettuce Cups.\" It also fails to directly address the full ingredient combination baby gem lettuce, garlic, gochujang, or"
+  },
+  {
+    "query": "baby gem lettuce, garlic, gochujang, maple syrup",
+    "prompt": "detailed",
+    "score": "bad",
+    "reason": "The answer is not grounded in the supplied recipes and does not directly address the ingredient query. It only matches garlic and maple syrup, while ignoring baby gem lettuce and gochujang, and it fails to recommend the expected existing recipe, Beyond Meat Chilli Beef Lettuce Cups, which is the far"
+  },
+  {
+    "query": "Chickpeas, oats, red pepper, onion",
+    "prompt": "concise",
+    "score": "bad",
+    "reason": "The answer does not directly address the full ingredient query (chickpeas, oats, red pepper, onion) and fails to recommend the expected existing recipe, Chickpea Chilli Burgers. It only loosely matches chickpea and onion, with irrelevant or incomplete recipe explanations."
+  },
+  {
+    "query": "Chickpeas, oats, red pepper, onion",
+    "prompt": "detailed",
+    "score": "bad",
+    "reason": "The answer does not recommend the expected recipe, Chickpea Chilli Burgers, and it only loosely matches ingredients by listing partial overlaps. It also fails to directly address the full ingredient query (chickpeas, oats, red pepper, onion), so it is not sufficiently grounded in the supplied recipe"
+  },
+  {
+    "query": "Garlic, tomato paste, flaxseed, soy sauce",
+    "prompt": "concise",
+    "score": "bad",
+    "reason": "The answer does not recommend the expected recipe 'Chickpea Chilli Burgers' and instead lists unrelated recipes. It only loosely matches individual ingredients like garlic and soy sauce, so it is not directly grounded in the supplied recipes or the ingredient query."
+  },
+  {
+    "query": "Garlic, tomato paste, flaxseed, soy sauce",
+    "prompt": "detailed",
+    "score": "bad",
+    "reason": "The response does not recommend the expected recipe (Chickpea Chilli Burgers) and its listed matches are not grounded in the ingredient query of garlic, tomato paste, flaxseed, and soy sauce. It only loosely matches garlic/soy sauce and includes unrelated recipes instead of directly addressing the q"
+  },
+  {
+    "query": "Dried tomatoes, chilli, black pepper",
+    "prompt": "concise",
+    "score": "bad",
+    "reason": "The answer is not grounded in the supplied recipes and does not directly address the query. It recommends unrelated recipes instead of the expected Chickpea Chilli Burgers, and the ingredient matching is loose/inaccurate (e.g., only partial tomato/chili/pepper overlap, with unrelated missing-ingredi"
+  },
+  {
+    "query": "Dried tomatoes, chilli, black pepper",
+    "prompt": "detailed",
+    "score": "bad",
+    "reason": "The answer is not grounded in the supplied recipes and does not directly address the ingredient query. It recommends recipe IDs without confirming they are the expected existing recipes, and it fails to recommend Chickpea Chilli Burgers, which is the expected match for dried tomatoes, chilli, and\u9ed1\u80e1\u6912"
+  },
+  {
+    "query": "filo pastry, spinach, tofu",
+    "prompt": "concise",
+    "score": "good",
+    "reason": "The answer recommends an existing recipe that directly matches the ingredient query: recipe_id 03df656ecfc046fc999ec93d is described as the best match for filo pastry, spinach, and tofu, which aligns with the expected Turkish Tofu & Spinach B\u00f6rek. It also stays grounded by listing matched and missed"
+  },
+  {
+    "query": "filo pastry, spinach, tofu",
+    "prompt": "detailed",
+    "score": "good",
+    "reason": "The answer recommends an existing recipe that directly matches the query ingredients: it identifies the recipe matching filo pastry, spinach, and tofu, which aligns with the expected Turkish Tofu & Spinach B\u00f6rek. It also stays grounded in the provided recipes rather than inventing new ones."
+  },
+  {
+    "query": "crumbled tofu, garlic, mint",
+    "prompt": "concise",
+    "score": "good",
+    "reason": "The answer recommends an existing recipe, Turkish Tofu & Spinach B\u00f6rek, and directly matches the ingredient query with crumbled tofu, garlic, and mint. It is grounded in the supplied recipes and addresses the requested ingredients."
+  },
+  {
+    "query": "crumbled tofu, garlic, mint",
+    "prompt": "detailed",
+    "score": "bad",
+    "reason": "The answer is only partially grounded and does not directly satisfy the ingredient query. It mentions an existing recipe ID for Turkish Tofu & Spinach B\u00f6rek, but it also includes unrelated recipes that do not use crumbled tofu and mint together, and the matched ingredients/explanations are noisy. It"
+  },
+  {
+    "query": "margarine, nutritional yeast, black pepper",
+    "prompt": "concise",
+    "score": "bad",
+    "reason": "The answer is not fully grounded in the supplied recipes because it lists three recommendations even though only one clearly matches the ingredient query. It does recommend an existing recipe, Turkish Tofu & Spinach B\u00f6rek, and directly addresses the ingredients, but the additional recipes are only a"
+  },
+  {
+    "query": "margarine, nutritional yeast, black pepper",
+    "prompt": "detailed",
+    "score": "good",
+    "reason": "The answer recommends an existing recipe that directly matches the ingredient query: Turkish Tofu & Spinach B\u00f6rek. It also identifies the query ingredients (margarine, nutritional yeast, black pepper) in that recipe and provides a relevant preparation summary."
+  },
+  {
+    "query": "chia seeds, mango, almond milk",
+    "prompt": "concise",
+    "score": "good",
+    "reason": "The answer directly addresses the ingredient query and recommends existing recipe IDs. It includes the expected recipe match, Overnight Mango and Chia Seed Pudding, and the matched ingredients are grounded in the supplied recommendations."
+  },
+  {
+    "query": "chia seeds, mango, almond milk",
+    "prompt": "detailed",
+    "score": "bad",
+    "reason": "The answer does recommend an existing recipe that appears to match the query, but it is not grounded cleanly in the supplied recipes: it includes garbled/irrelevant missing_ingredients text and mentions recipes not clearly tied to the exact ingredient query. It also doesn\u2019t directly and clearly use/"
+  },
+  {
+    "query": "peanut butter with chia seeds and mango",
+    "prompt": "concise",
+    "score": "good",
+    "reason": "The answer recommends an existing recipe and directly matches the ingredient query by identifying peanut butter, chia seeds, and mango as the best match. It also aligns with the expected recipe concept (Overnight Mango and Chia Seed Pudding)."
+  },
+  {
+    "query": "peanut butter with chia seeds and mango",
+    "prompt": "detailed",
+    "score": "good",
+    "reason": "The answer recommends existing recipes and directly addresses the ingredient query by matching peanut butter, chia seeds, and mango. It also clearly identifies the best-matching expected recipe, Overnight Mango and Chia Seed Pudding."
+  },
+  {
+    "query": "mango, almond milk, peanut butter",
+    "prompt": "concise",
+    "score": "bad",
+    "reason": "The answer does recommend an existing recipe that matches the ingredient query, but it is not fully grounded: it includes vague/incorrect phrasing like \"missing_ingredients\": [\"ingredients\" ...] and adds weak extra recommendations that are not directly tied to the query. Still, it does address the *"
+  },
+  {
+    "query": "mango, almond milk, peanut butter",
+    "prompt": "detailed",
+    "score": "good",
+    "reason": "The answer recommends an existing recipe that directly matches the ingredient query, and the top recommendation aligns with the expected recipe 'Overnight Mango and Chia Seed Pudding' by including mango, almond milk, and peanut butter."
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "title": "Vegan Recipes Assistant", "uid": "vegan-recipes", "schemaVersion": 41,
+  "time": {"from": "now-7d", "to": "now"}, "refresh": "30s",
+  "panels": [
+    {"id":1,"title":"Requests over time","type":"timeseries","gridPos":{"x":0,"y":0,"w":12,"h":8},"targets":[{"rawSql":"SELECT $__timeGroup(created_at,'1h') time,count(*) value FROM interactions WHERE $__timeFilter(created_at) GROUP BY 1 ORDER BY 1","format":"time_series"}]},
+    {"id":2,"title":"Success / error rate","type":"piechart","gridPos":{"x":12,"y":0,"w":12,"h":8},"targets":[{"rawSql":"SELECT status metric,count(*) value FROM interactions WHERE $__timeFilter(created_at) GROUP BY status","format":"table"}]},
+    {"id":3,"title":"Average and p95 latency","type":"timeseries","gridPos":{"x":0,"y":8,"w":12,"h":8},"targets":[{"rawSql":"SELECT $__timeGroup(created_at,'1h') time,avg(total_ms) avg_ms,percentile_cont(.95) WITHIN GROUP (ORDER BY total_ms) p95_ms FROM interactions WHERE $__timeFilter(created_at) GROUP BY 1 ORDER BY 1","format":"time_series"}]},
+    {"id":4,"title":"Retrieval vs LLM latency","type":"timeseries","gridPos":{"x":12,"y":8,"w":12,"h":8},"targets":[{"rawSql":"SELECT $__timeGroup(created_at,'1h') time,avg(retrieval_ms) retrieval_ms,avg(llm_ms) llm_ms FROM interactions WHERE $__timeFilter(created_at) GROUP BY 1 ORDER BY 1","format":"time_series"}]},
+    {"id":5,"title":"Token usage","type":"timeseries","gridPos":{"x":0,"y":16,"w":8,"h":8},"targets":[{"rawSql":"SELECT $__timeGroup(created_at,'1h') time,sum(input_tokens) input,sum(output_tokens) output FROM interactions WHERE $__timeFilter(created_at) GROUP BY 1 ORDER BY 1","format":"time_series"}]},
+    {"id":6,"title":"Estimated cost (USD)","type":"stat","gridPos":{"x":8,"y":16,"w":8,"h":8},"targets":[{"rawSql":"SELECT coalesce(sum(estimated_cost_usd),0) value FROM interactions WHERE $__timeFilter(created_at)","format":"table"}]},
+    {"id":7,"title":"User feedback","type":"barchart","gridPos":{"x":16,"y":16,"w":8,"h":8},"targets":[{"rawSql":"SELECT CASE feedback WHEN 1 THEN 'positive' WHEN -1 THEN 'negative' ELSE 'none' END metric,count(*) value FROM interactions WHERE $__timeFilter(created_at) GROUP BY feedback","format":"table"}]}
+  ]
+}
+

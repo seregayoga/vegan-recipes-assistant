@@ -1,0 +1,14 @@
+{
+  "queries": 60,
+  "winner": "keyword",
+  "results": {
+    "keyword": {
+      "hit_rate_at_5": 0.8333333333333334,
+      "mrr_at_5": 0.7722222222222223
+    },
+    "hybrid": {
+      "hit_rate_at_5": 0.5333333333333333,
+      "mrr_at_5": 0.3925
+    }
+  }
+}

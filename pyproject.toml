@@ -1,0 +1,26 @@
+[project]
+name = "vegan-recipes-assistant"
+version = "0.1.0"
+description = "Grounded vegan recipe recommendations with hybrid PostgreSQL retrieval"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "openai==1.99.9", "pydantic==2.11.7", "pydantic-settings==2.10.1",
+  "psycopg[binary,pool]==3.2.9", "pgvector==0.4.1", "streamlit==1.48.1",
+  "prefect==3.4.13", "fastapi==0.115.14", "pandas==2.3.1", "httpx==0.28.1",
+  "optimum[onnxruntime]==1.27.0", "transformers==4.53.3", "torch==2.8.0"
+]
+
+[dependency-groups]
+dev = ["pytest==8.4.1", "pytest-cov==6.2.1", "ruff==0.12.8"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 140
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
